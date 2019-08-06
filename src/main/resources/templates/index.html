@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1"></meta>
+	<title>Advertiser Report</title>
+</head>
+<body>
+
+<div th:switch="${reportResponses}">
+    <h2 th:case="null">No Report Data!</h2>
+    <div th:case="*">
+         <h2>Report</h2>
+         <table>
+             <thead>
+                 <tr>
+                     <th>adSpend</th>
+                     <th>CTR</th>
+                     <th>campaignId</th>
+                     <th>campaignName</th>
+                     <th>clicks</th>
+                     <th>conversions</th>
+                     <th>costPerClick</th>
+                     <th>costPerConversion</th>
+                     <th>date</th>
+                     <th>impressions</th>
+                 </tr>
+             </thead>
+             <tbody>
+             <tr th:each="reportRes : ${reportResponses}">
+                 <td th:text="${reportRes.adSpend}"></td>
+                 <td th:text="${reportRes.CTR}"></td>
+                 <td th:text="${reportRes.campaignId}"></td>
+                 <td th:text="${reportRes.campaignName}"></td>
+                 <td th:text="${reportRes.clicks}"></td>
+                 <td th:text="${reportRes.conversions}"></td>
+                 <td th:text="${reportRes.costPerClick}"></td>
+                 <td th:text="${reportRes.costPerConversion}"></td>
+                 <td th:text="${reportRes.date}"></td>
+                 <td th:text="${reportRes.impressions}"></td>
+             </tr>
+         	</tbody>
+     	</table>
+    </div>
+       
+    <p><a href="/report">Generate Report</a></p>
+</div>
+
+</body>
+</html>

@@ -1,21 +1,22 @@
 package com.abhinav.mobiAssign.model;
 
+
+// POJO class to map the returned response from the advertiser API
 public class ReportResponse {
 
-	private Integer adSpend;
-	private Integer CTR;
-	private Integer campaignId;
+	private double adSpend;
+	private double CTR;
+	private String campaignId;
 	private String campaignName;
-	private Integer clicks;
-	private Integer conversions;
-	private Integer costPerClick;
+	private int clicks;
+	private int conversions;
+	private double costPerClick;
 	private String costPerConversion;
 	private String date;
-	private Integer impressions;
+	private int impressions;
 	
-	
-	public ReportResponse(Integer adSpend, Integer cTR, Integer campaignId, String campaignName, Integer clicks,
-			Integer conversions, Integer costPerClick, String costPerConversion, String date, Integer impressions) {
+	public ReportResponse(double adSpend, double cTR, String campaignId, String campaignName, int clicks,
+			int conversions, double costPerClick, String costPerConversion, String date, int impressions) {
 		super();
 		this.adSpend = adSpend;
 		CTR = cTR;
@@ -29,83 +30,83 @@ public class ReportResponse {
 		this.impressions = impressions;
 	}
 
-	public Integer getAdSpend() {
+	public double getAdSpend() {
 		return adSpend;
 	}
-	
-	public void setAdSpend(Integer adSpend) {
+
+	public void setAdSpend(double adSpend) {
 		this.adSpend = adSpend;
 	}
-	
-	public Integer getCTR() {
+
+	public double getCTR() {
 		return CTR;
 	}
-	
-	public void setCTR(Integer cTR) {
+
+	public void setCTR(double cTR) {
 		CTR = cTR;
 	}
-	
-	public Integer getCampaignId() {
+
+	public String getCampaignId() {
 		return campaignId;
 	}
-	
-	public void setCampaignId(Integer campaignId) {
+
+	public void setCampaignId(String campaignId) {
 		this.campaignId = campaignId;
 	}
-	
+
 	public String getCampaignName() {
 		return campaignName;
 	}
-	
+
 	public void setCampaignName(String campaignName) {
 		this.campaignName = campaignName;
 	}
-	
-	public Integer getClicks() {
+
+	public int getClicks() {
 		return clicks;
 	}
-	
-	public void setClicks(Integer clicks) {
+
+	public void setClicks(int clicks) {
 		this.clicks = clicks;
 	}
-	
-	public Integer getConversions() {
+
+	public int getConversions() {
 		return conversions;
 	}
-	
-	public void setConversions(Integer conversions) {
+
+	public void setConversions(int conversions) {
 		this.conversions = conversions;
 	}
-	
-	public Integer getCostPerClick() {
+
+	public double getCostPerClick() {
 		return costPerClick;
 	}
-	
-	public void setCostPerClick(Integer costPerClick) {
+
+	public void setCostPerClick(double costPerClick) {
 		this.costPerClick = costPerClick;
 	}
-	
+
 	public String getCostPerConversion() {
 		return costPerConversion;
 	}
-	
+
 	public void setCostPerConversion(String costPerConversion) {
 		this.costPerConversion = costPerConversion;
 	}
-	
+
 	public String getDate() {
 		return date;
 	}
-	
+
 	public void setDate(String date) {
 		this.date = date;
 	}
-	
-	public Integer getImpressions() {
+
+	public int getImpressions() {
 		return impressions;
 	}
-	
-	public void setImpressions(Integer impressions) {
+
+	public void setImpressions(int impressions) {
 		this.impressions = impressions;
 	}
 

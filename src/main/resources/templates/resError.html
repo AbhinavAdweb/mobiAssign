@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1"></meta>
+	<title>Error!</title>
+</head>
+
+<body>
+    <h2>Errors</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Code</th>
+                <th>Message</th>
+            </tr>
+        </thead>
+        <tbody>
+         <tr th:each="err : ${errorList}">
+             <td th:text="${err.code}"></td>
+             <td th:text="${err.message}"></td>
+         </tr>
+    	</tbody>
+	</table>
+       
+    <p><a href="/report">Generate Report</a></p>
+
+</body>
+</html>

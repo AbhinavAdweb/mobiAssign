@@ -1,5 +1,7 @@
 package com.abhinav.mobiAssign.model;
 
+
+// POJO class to map the submitted form on the gen-rep page
 public class Report {
 
 	private String timeFrame;
