@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1"></meta>
+	<title>Report Generation</title>
+</head>
+<body>
+
+<form action="#" th:action="@{/generateReport}" th:object="${report}" method="post">
+    <label for="timeFrame">Time Frame</label>
+    <input type="text" th:field="*{timeFrame}" id="timeFrame" placeholder="YYYY-mm-dd:YYYY-mm-dd"></input>
+    <span th:if="${#fields.hasErrors('timeFrame')}" th:errors="timeFrame"></span>
+    
+    <label for="groupBy">Group By</label>
+    <input type="text" th:field="*{groupBy}" id="groupBy" placeholder="a,b,c"></input>
+    <span th:if="${#fields.hasErrors('groupBy')}" th:errors="*{groupBy}"></span>
+    
+    <label for="orderBy">Order By</label>
+    <input type="text" th:field="*{orderBy}" id="orderBy" placeholder="x,y,z"></input>
+    <span th:if="${#fields.hasErrors('orderBy')}" th:errors="*{orderBy}"></span>
+    
+    <input type="submit" value="Generate Report"></input>   
+</form>
+
+</body>
+</html>
